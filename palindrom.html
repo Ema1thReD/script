@@ -1,0 +1,42 @@
+<html>
+
+    <body>
+        <div id="container">
+
+            <H1>Palindrome Checker</H1>
+            <input type="text" id="getString" class="getString" value="Enter a word or number.">
+            <input type="button" id="button" class="button" value=" Palindrome? ">
+            <p id="answer">Click for result.</p>
+        </div>
+        <script>
+            document.getElementById('getString').onclick = function () {
+
+                document.getElementById('getString').value = '';
+            }
+            function checkPal(n) {
+                var original = n + "";
+                var compareWord = original.split("").reverse().join("");
+                if (compareWord === "") {
+                    document.getElementById('answer').innerHTML =
+                        "Please enter something."
+                }
+                else if (compareWord.toUpperCase() === original.toUpperCase()) {
+                    document.getElementById('answer').innerHTML =
+                        "Yes, " + '"' + original + '"' + "is a palindrome.";
+                }
+
+                else {
+
+                    document.getElementById('answer').innerHTML = "No, " + '"' + original + '"' + " is not palindrome";
+                }
+            }
+
+            document.getElementById('button').onclick = function () {
+                var submission = document.getElementById('getString').value;
+
+                checkPal(submission);
+            }
+        </script>
+    </body>
+
+</html>
