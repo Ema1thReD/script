@@ -1,0 +1,26 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var fruits=['mango','gua','banana','graphes','pomegranate'];
+            console.log(fruits[0]);
+            //mango
+            console.log(fruits[1]);
+            //gua
+            console.log(fruits[2]);
+            //banana
+            var last=fruits[fruits.length-1];
+            console.log(last);
+            //pomegranate
+            fruits.forEach(function(item,index,array){
+                console.log(item,index);
+            });
+            var addLast=fruits.push('apple');
+            console.log(addLast);
+            //Adding element at last position
+            
+        </script>
+    </body>
+</html>
